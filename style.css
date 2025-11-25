@@ -1,0 +1,85 @@
+/* Basic body styling */
+body { 
+    margin: 0; 
+    padding: 0;
+    overflow: hidden; 
+    background-color: #1A2A38; /* Matches palette1.bg */
+    font-family: sans-serif; 
+}
+
+canvas { 
+    display: block; 
+}
+
+/* Styling for the emotion title overlay */
+#emotion-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #4A90E2; /* Main blue color */
+    font-size: 28px; 
+    z-index: 10; 
+    font-weight: bold;
+    pointer-events: none; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Styling for the interactive instructions textbox */
+#interaction-instructions {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; /* Positioned at Bottom Right */
+    width: 230px; 
+    padding: 15px;
+    
+    /* Dark, semi-transparent blue background */
+    background-color: rgba(26, 42, 56, 0.85); 
+    border: 1px solid rgba(74, 144, 226, 0.4); /* Subtle Blue Border */
+    border-radius: 8px; 
+    
+    color: #E0E0E0; /* Off-white text */
+    font-size: 13px; 
+    line-height: 1.5; 
+    z-index: 10;
+    
+    /* Interactive properties */
+    cursor: pointer;
+    will-change: max-height;
+    transition: max-height 0.3s ease, background-color 0.2s; 
+    overflow: hidden; 
+    max-height: 300px; 
+}
+
+#interaction-instructions:hover {
+    background-color: rgba(26, 42, 56, 0.95); /* Slightly darker on hover */
+    border-color: rgba(74, 144, 226, 0.7);
+}
+
+/* Collapsed state styling */
+#interaction-instructions.collapsed {
+    max-height: 40px; 
+}
+
+#instructions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+    padding-bottom: 5px;
+    color: #FFFFFF; /* Header text blue */
+}
+
+#instructions-content p {
+    margin: 0 0 8px 0; 
+}
+
+#instructions-content p:last-child {
+    margin-bottom: 0; 
+}
+
+#toggle-icon {
+    font-weight: bold;
+    font-size: 16px;
+}
