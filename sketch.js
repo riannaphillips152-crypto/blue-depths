@@ -4,7 +4,6 @@ let lineCount = 180; // Increased number of lines for more density
 
 let capture; // Variable for webcam
 
-// --- More Blue Color Palettes (BOLDER LINES) ---
 const palette1 = {
   bg: '#1A2A38', // Darker, deep blue-grey
   main: '#4A90E2', // Bolder, more vibrant blue
@@ -69,11 +68,11 @@ function setup() {
   capture.size(320, 240); 
   capture.hide(); 
 
-  // Initialize colors with the first palette
+  //  colors with the first palette
   applyPalette(palette1);
   background(bgColor); // Set initial background
 
-  // Initialize abstract lines
+  //  abstract lines
   for (let i = 0; i < lineCount; i++) {
     lines.push(new SadLine(random(width), random(-height, height)));
   }
